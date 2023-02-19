@@ -9,14 +9,16 @@ namespace CityEventsService.Dto
 {
     public class EventReservDTO
     {
-        [Required(ErrorMessage = "Id do evento é obrigatório")]
-        [Range(1, int.MaxValue, ErrorMessage = "Precisa informar um não nulo válido")]
+        [Required(ErrorMessage = "The ID is necessary!")]
+        [Range(1, int.MaxValue, ErrorMessage = "Cant be null")]
         public int IdEvent { get; set; }
-        [Required(AllowEmptyStrings = false, ErrorMessage = "O nome para registro da reserva é obrigatório")]
+
+        [Required(AllowEmptyStrings = false, ErrorMessage = "The name is necessary")]
         [MaxLength(100)]
         public string PersonName { get; set; }
-        [Required(ErrorMessage = "A quantidade de reservas é obrigatória")]
-        [Range(1, 10, ErrorMessage = "A quantidade deve estar entre 1 e 10")]
+
+        [Required(ErrorMessage = "Please inform how many you want")]
+        [Range(1, 50, ErrorMessage = "Between 1 and 50")]
         public int Quantity { get; set; }
     }
 }

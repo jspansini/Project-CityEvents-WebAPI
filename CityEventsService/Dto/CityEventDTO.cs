@@ -10,7 +10,7 @@ namespace CityEvents.Service.DTO
     public class CityEventDTO
     {
         [Required(AllowEmptyStrings = false, ErrorMessage = "The title is necessary!")]
-        [MaxLength(255)]
+        [MaxLength(100)]
         public string Title { get; set; }
 
         public string? Description { get; set; }
