@@ -1,0 +1,7 @@
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\EventosDaCidade\obj\Debug\net6.0\CityEvents.csproj.AssemblyReference.cache
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\EventosDaCidade\obj\Debug\net6.0\CityEvents.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\EventosDaCidade\obj\Debug\net6.0\CityEvents.AssemblyInfoInputs.cache
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\EventosDaCidade\obj\Debug\net6.0\CityEvents.AssemblyInfo.cs
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\EventosDaCidade\obj\Debug\net6.0\CityEvents.csproj.CoreCompileInputs.cache
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\EventosDaCidade\obj\Debug\net6.0\CityEvents.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\EventosDaCidade\obj\Debug\net6.0\CityEvents.MvcApplicationPartsAssemblyInfo.cache
