@@ -7,7 +7,7 @@ namespace CityEventsWebApi.Controllers
     [Route("[controller]")]
     [Consumes("application/json")]
     [Produces("application/json")]
-    public class EventReservationController : ControllerBase
+    public class EventReservationsController : ControllerBase
     {
 
 
@@ -15,26 +15,29 @@ namespace CityEventsWebApi.Controllers
         [HttpPost]
         public ActionResult<EventReservationEntitys>  MakeNewReservation()
         {
-
+            return Ok();
         }
 
         //Edição da quantidade de uma reserva
         [HttpPut]
         public ActionResult<EventReservationEntitys> EditReservation()
         {
-
+            return Ok();
         }
+
+
         //Remoção de uma reserva
         [HttpDelete]
         public ActionResult<EventReservationEntitys> DeleteReservation()
         {
-
+            return Ok();
         }
+
         //Consulta de reserva pelo PersonName e Title do evento
         [HttpGet]
         public ActionResult<EventReservationEntitys> SearchReservationByNameAndTitle()
         {
-
+            return Ok();
         }
     }
 }
