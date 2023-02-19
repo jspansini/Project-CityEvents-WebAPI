@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ozJlO99GFvzcD/zSsQ2EWGkt5WXwQzs+tflN+X8Q4uPZU3hjQY3y8wsw0eos3Phh+/ItR6SNeW8nMaK6uGHNag==",
+  "dgSpecHash": "yk3iMhHu+h/xhenchUQq93XUOkmxk4mSSMXRY9dxhDMQOlXiTC3nkjGPJGL3cJSYnJhUYYlM7wqdJAHN+rqqXg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsService\\CityEventsService.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Fotomovel\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Fotomovel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

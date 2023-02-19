@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "BIz48/KF1KMQ+PIIgM7OAMuo+OknJ4DHCDljjmKhsjAlsk52dz++81TeVqKD1PANutO9A1mEt/GhzMvVa8T9Lw==",
+  "dgSpecHash": "EyfjssyKvxAtyX63iKmhU3IoUdFhMplPnE0T3oOM0isqHbu2W3gduOm9rwyAPPZc5mmIJq2vgcBXb4rq7dJ0Sw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsWebApi\\CityEvents.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Fotomovel\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Fotomovel\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\Fotomovel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Fotomovel\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Fotomovel\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Fotomovel\\.nuget\\packages\\mysqlconnector\\2.2.5\\mysqlconnector.2.2.5.nupkg.sha512",
     "C:\\Users\\Fotomovel\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\Fotomovel\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\Fotomovel\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

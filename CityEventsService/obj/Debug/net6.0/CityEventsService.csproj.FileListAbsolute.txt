@@ -1,0 +1,12 @@
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\CityEventsService\obj\Debug\net6.0\CityEventsService.csproj.AssemblyReference.cache
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\CityEventsService\obj\Debug\net6.0\CityEventsService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\CityEventsService\obj\Debug\net6.0\CityEventsService.AssemblyInfoInputs.cache
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\CityEventsService\obj\Debug\net6.0\CityEventsService.AssemblyInfo.cs
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\CityEventsService\obj\Debug\net6.0\CityEventsService.csproj.CoreCompileInputs.cache
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\CityEventsService\bin\Debug\net6.0\CityEventsService.deps.json
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\CityEventsService\bin\Debug\net6.0\CityEventsService.dll
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\CityEventsService\bin\Debug\net6.0\CityEventsService.pdb
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\CityEventsService\obj\Debug\net6.0\CityEventsService.dll
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\CityEventsService\obj\Debug\net6.0\refint\CityEventsService.dll
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\CityEventsService\obj\Debug\net6.0\CityEventsService.pdb
+C:\Users\Fotomovel\Desktop\EventosDaCidadeApi\Project-CityEvents-WebAPI\CityEventsService\obj\Debug\net6.0\ref\CityEventsService.dll

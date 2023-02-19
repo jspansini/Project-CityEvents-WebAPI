@@ -9,27 +9,13 @@ namespace CityEventsService.Entitys
 {
     public class CityEventsEntitys
     {
-        [Key]
-        public long IdEvent { get; set; }
-
-        [Required]
+        public int IdEvent { get; set; }
         public string Title { get; set; }
-
-        public string? Description { get; set; }
-
-        [Required(ErrorMessage = "Please, fill the Date-Hour in this format: day/month/year hour:minut")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy HH:mm}")]
+        public string Description { get; set; }
         public DateTime DateHourEvent { get; set; }
-
-        [Required]
         public string Local { get; set; }
-
-        public string? Address { get; set; }
-
-        [Required]
-        public decimal Price { get; set; }
-
-        [Required]
+        public string Address { get; set; }
+        public Decimal Price { get; set; }
         public bool Status { get; set; }
     }
 }
