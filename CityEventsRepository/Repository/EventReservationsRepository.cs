@@ -32,12 +32,12 @@ namespace CityEventsInfraData.Repository
         //    return Task.FromResult(conn.Query<EventReservationEntitys>(query, parametro).ToList());
         //}
 
-        public Task<IEnumerable<EventReservationEntitys>> ConsultaReserva(string nome, string tituloEvento)
+        public Task<IEnumerable<EventReservationEntitys>> ConsultReservation(string nome, string tituloEvento)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<bool> DeletaReserva(int id)
+        public async Task<bool> DeleteReservation(int id)
         {
             string query = "DELETE FROM EventReservation where id = @id";
             DynamicParameters parametro = new(id);
@@ -46,7 +46,7 @@ namespace CityEventsInfraData.Repository
             return linhasAfetadas > 0;
         }
 
-        public async Task<bool> EditarQuantidadeReserva(int id, int quantidade)
+        public async Task<bool> EditReservation(int id, int quantidade)
         {
             string query = "UPDATE EventReservation SET Quantity = @quantidade where idReservation = @id";
             DynamicParameters parametro = new(id);
@@ -56,7 +56,7 @@ namespace CityEventsInfraData.Repository
             return linhasAfetadas > 0;
         }
         
-        public async Task<bool> AdicionarReserva(EventReservDTO reserve)
+        public async Task<bool> AddReservation(EventReservDTO reserve)
         {
             string query = "INSERT INTO EventReservation (IdEvent,PersonName,Quantity) VALUES (@IdEvent,@PersonName,@Quantity)";
             DynamicParameters parametro = new(reserve);
@@ -65,7 +65,7 @@ namespace CityEventsInfraData.Repository
             return linhasAfetadas > 0;
         }
 
-        public async Task<bool> ValidaStatusEvento(int idEvento)
+        public async Task<bool> ValidateStatus(int idEvento)
         {
             string query = "SELECT * FROM CityEvent where idEvent = @idEvento";
             DynamicParameters parametro = new();

@@ -98,11 +98,7 @@ namespace CityEventsInfraData.Repository
         }
 
 
-
-
-
-
-
+        //falta implementar
         Task<IEnumerable<CityEventsEntitys>> ICityEventsRepository.ConsultaPorLocalEData(string local, DateTime data)
         {
             throw new NotImplementedException();
