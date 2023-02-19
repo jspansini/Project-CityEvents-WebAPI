@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aG3Aogd0e11awE6ipRufwa1KAK2evaSHOkv+nlAFl+MYPZKBFHJwuTh83gp2p/jamR+riYlt1Q6ixhGENhFn/g==",
+  "dgSpecHash": "+7Pm2FOY5K0uFWxdiiOhsriWOPCoRFqD/+poMk8Hy+df0/mejO3A/3DoVTUI8TLKJ4BSjGj4rf2ur9QhSQQsoQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\EventosDaCidade\\CityEvents.csproj",
+  "projectFilePath": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsWebApi\\CityEvents.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fotomovel\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Fotomovel\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

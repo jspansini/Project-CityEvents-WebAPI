@@ -229,11 +229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\EventosDaCidade\\CityEvents.csproj",
+      "projectUniqueName": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsWebApi\\CityEvents.csproj",
       "projectName": "CityEvents",
-      "projectPath": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\EventosDaCidade\\CityEvents.csproj",
+      "projectPath": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsWebApi\\CityEvents.csproj",
       "packagesPath": "C:\\Users\\Fotomovel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\EventosDaCidade\\obj\\",
+      "outputPath": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Fotomovel\\AppData\\Roaming\\NuGet\\NuGet.Config",

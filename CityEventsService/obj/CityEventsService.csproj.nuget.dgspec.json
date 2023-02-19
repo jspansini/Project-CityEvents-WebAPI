@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsWebApi\\CityEvents.csproj": {}
+    "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsService\\CityEventsService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsWebApi\\CityEvents.csproj": {
+    "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsService\\CityEventsService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsWebApi\\CityEvents.csproj",
-        "projectName": "CityEvents",
-        "projectPath": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsWebApi\\CityEvents.csproj",
+        "projectUniqueName": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsService\\CityEventsService.csproj",
+        "projectName": "CityEventsService",
+        "projectPath": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsService\\CityEventsService.csproj",
         "packagesPath": "C:\\Users\\Fotomovel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsWebApi\\obj\\",
+        "outputPath": "C:\\Users\\Fotomovel\\Desktop\\EventosDaCidadeApi\\Project-CityEvents-WebAPI\\CityEventsService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Fotomovel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,12 +39,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.2.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -57,9 +51,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
