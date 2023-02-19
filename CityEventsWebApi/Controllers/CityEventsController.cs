@@ -1,3 +1,4 @@
+using CityEventsService.Entitys;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CityEventsWebApi.Controllers
@@ -12,44 +13,44 @@ namespace CityEventsWebApi.Controllers
 
         //Inclusão de um novo evento
         [HttpPost]
-        public ActionResult<CityEventEntity> InsertEvent(CityEventEntity entity)
+        public ActionResult<CityEventsEntitys> InsertEvent()
         {
-
+            return;
         }
 
         //Edição de um evento existente
         [HttpPut]
-        public ActionResult<CityEventEntity> EditEvent(CityEventEntity id)
+        public ActionResult<CityEventsEntitys> EditEvent()
         {
-
+            return;
         }
 
         //Remoção de um evento
         [HttpDelete]
-        public ActionResult<CityEventEntity> RemoveEvent(CityEventEntity id)
+        public ActionResult<CityEventsEntitys> RemoveEvent()
         {
-
+            return;
         }
 
         //Consulta por título
         [HttpGet]
-        public ActionResult<CityEventEntity> SearchByTitle(CityEventEntity algo)
+        public ActionResult<CityEventsEntitys> SearchByTitle()
         {
-
+            return;
         }
 
         //Consulta por local e data
         [HttpGet]
-        public ActionResult<CityEventEntity> SearchByPlaceAndDate(CityEventEntity algo)
+        public ActionResult<CityEventsEntitys> SearchByPlaceAndDate()
         {
-
+            return;
         }
 
         //Consulta por range de preço e a data
         [HttpGet]
-        public ActionResult<CityEventEntity> SearchByPriceAndDate(CityEventEntity algo)
+        public ActionResult<CityEventsEntitys> SearchByPriceAndDate()
         {
-
+            return;
         }
     }
 }

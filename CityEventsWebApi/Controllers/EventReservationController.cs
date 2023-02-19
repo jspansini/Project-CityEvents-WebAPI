@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CityEventsService.Entitys;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CityEventsWebApi.Controllers
 {
@@ -12,26 +13,26 @@ namespace CityEventsWebApi.Controllers
 
         //Inclusão de uma nova reserva
         [HttpPost]
-        public ActionResult<EventReservationEntity>  MakeNewReservation()
+        public ActionResult<EventReservationEntitys>  MakeNewReservation()
         {
 
         }
 
         //Edição da quantidade de uma reserva
         [HttpPut]
-        public ActionResult<EventReservationEntity> EditReservation()
+        public ActionResult<EventReservationEntitys> EditReservation()
         {
 
         }
         //Remoção de uma reserva
         [HttpDelete]
-        public ActionResult<EventReservationEntity> DeleteReservation()
+        public ActionResult<EventReservationEntitys> DeleteReservation()
         {
 
         }
         //Consulta de reserva pelo PersonName e Title do evento
         [HttpGet]
-        public ActionResult<EventReservationEntity> SearchReservationByNameAndTitle()
+        public ActionResult<EventReservationEntitys> SearchReservationByNameAndTitle()
         {
 
         }
