@@ -6,7 +6,7 @@
 
 <h3> FINAL PROJECT - BACKEND WEB API DEVELOPMENT </h3>
 <p> Institution: AdaTechnology</p>
-<p> Teacher: Amanda Mantonvani</p>
+<p> Teacher: Amanda Mantovani</p>
 <p> Tech: C#, Dotnet, MySql</p>
 
 
