@@ -17,21 +17,21 @@ namespace CityEventsService.Service
         private ICityEventsRepository _repository;
         private IMapper _mapper;
 
-        public CityEventService(ICityEventsRepository rep, IMapper mapper)
+        public CityEventService(ICityEventsRepository repository, IMapper mapper)
         {
-            _repository = rep;
+            _repository = repository;
             _mapper = mapper;
         }
 
-        public async Task<bool> AdicionarEvento(CityEventDTO evento)
+        public async Task<bool> AddcEvent(CityEventDTO evento)
         {
             CityEventsEntitys entidade = _mapper.Map<CityEventsEntitys>(evento);
-            return await _repository.AdicionarEvento(entidade);
+            return await _repository.AddEvent(entidade);
         }
 
-        public async Task<IEnumerable<CityEventDTO>> ConsultaPorLocalEData(string local, DateTime data)
+        public async Task<IEnumerable<CityEventDTO>> CheckLocalDate(string local, DateTime data)
         {
-            IEnumerable<CityEventsEntitys> entidade = (IEnumerable<CityEventsEntitys>)await _repository.ConsultaPorLocalEData(local, data);
+            IEnumerable<CityEventsEntitys> entidade = (IEnumerable<CityEventsEntitys>)await _repository.SearchBySLocaDate(local, data);
             if (entidade == null)
             {
                 return null;
@@ -41,9 +41,9 @@ namespace CityEventsService.Service
             return eventoDto;
         }
 
-        public async Task<IEnumerable<CityEventDTO>> ConsultaPorPrecoEData(decimal precoMin, decimal precoMax, DateTime data)
+        public async Task<IEnumerable<CityEventDTO>> CheckPriceDateR(decimal precoMin, decimal precoMax, DateTime data)
         {
-            IEnumerable<CityEventsEntitys> entidade = (IEnumerable<CityEventsEntitys>)await _repository.ConsultaPorPrecoEData(precoMin, precoMax, data);
+            IEnumerable<CityEventsEntitys> entidade = (IEnumerable<CityEventsEntitys>)await _repository.SearchBySPriceDate(precoMin, precoMax, data);
             if (entidade == null)
             {
                 return null;
@@ -52,10 +52,10 @@ namespace CityEventsService.Service
             return eventoDto;
         }
 
-        public async Task<IEnumerable<CityEventDTO>> ConsultarPorTitulo(string titulo)
+        public async Task<IEnumerable<CityEventDTO>> CheckbyTitle(string titulo)
         {
 
-            IEnumerable<CityEventsEntitys> entidade = (IEnumerable<CityEventsEntitys>)await _repository.ConsultaPorTitulo(titulo);
+            IEnumerable<CityEventsEntitys> entidade = (IEnumerable<CityEventsEntitys>)await _repository.SearchBySTitle(titulo);
             if (entidade == null)
             {
                 return null;
@@ -64,21 +64,21 @@ namespace CityEventsService.Service
             return eventoDto;
         }
 
-        public async Task<bool> DeletarOuInativarEvento(int id)
+        public async Task<bool> RemoveOrDeactivate(int id)
         {
-            bool quantidadeReserva = await _repository.ConsultaReservasNoEvento(id);
+            bool quantidadeReserva = await _repository.CheckReservations(id);
 
             if (quantidadeReserva != false)
             {
-                return await _repository.ExcluirEvento(id);
+                return await _repository.DeletEvent(id);
             }
-            return await _repository.InativarEvento(id);
+            return await _repository.InactivateEvent(id);
         }
 
-        public async Task<bool> EditarEvento(CityEventDTO evento, int id)
+        public async Task<bool> EditEvent(CityEventDTO evento, int id)
         {
             CityEventsEntitys entidade = _mapper.Map<CityEventsEntitys>(evento);
-            return await _repository.EditarEvento(entidade, id);
+            return await _repository.EditEvent(entidade, id);
         }
     }
 }

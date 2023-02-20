@@ -20,18 +20,6 @@ namespace CityEventsInfraData.Repository
             _stringConnection = Environment.GetEnvironmentVariable("DATABASE_CONFIG");
         }
 
-
-        //public Task<IEnumerable<EventReservationEntitys>> IEventReservationRepository.ConsultaReserva(string nome, string tituloEvento)
-        //{
-        //    string query = "SELECT * FROM EventReservation  INNER JOIN CityEvent ON CityEvent.IdEvent = EventReservation.IdEvent WHERE PersonName = @nome  AND Title LIKE @titulo";
-        //    DynamicParameters parametro = new();
-        //    tituloEvento = $"%{tituloEvento}%";
-        //    parametro.Add("nome", nome);
-        //    parametro.Add("titulo", tituloEvento);
-        //    using MySqlConnection conn = new(_stringConnection);
-        //    return Task.FromResult(conn.Query<EventReservationEntitys>(query, parametro).ToList());
-        //}
-
         public Task<IEnumerable<EventReservationEntitys>> ConsultReservation(string nome, string tituloEvento)
         {
             throw new NotImplementedException();
@@ -75,6 +63,9 @@ namespace CityEventsInfraData.Repository
             return valor.Status;
         }
 
-     
+        public Task<bool> ValidaStatusEvento(int idEvent)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

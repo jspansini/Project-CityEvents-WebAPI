@@ -10,9 +10,9 @@ namespace CityEventsService.Interfaces
 {
     public interface IEventReservationService
     {
-        Task<bool> AdicionarReserva(EventReservDTO reserva);
-        Task<IEnumerable<EventReservDTO>> ConsultaReserva(string nome, string tituloEvento);
-        Task<bool> DeletaReserva(int id);
-        Task<bool> EditarQuantidadeReserva(int id, int quantidade);
+        Task<bool> AddReservation(EventReservDTO reserve);
+        Task<IEnumerable<EventReservDTO>> ConsultReservation(string nome, string tituloEvento);
+        Task<bool> RemoveReservation(int id);
+        Task<bool> EditReservation(int id, int quantidade);
     }
 }

@@ -21,24 +21,21 @@ namespace CityEventsService.Service
             _mapper = mapper;
         }
 
-
-
-     
-        public async Task<bool> AdicionarReserva(EventReservDTO reserve)
+        public async Task<bool> AddReservation(EventReservDTO reserve)
         {
             bool status = await _repository.ValidaStatusEvento(reserve.IdEvent);
             if (status)
             {
                 EventReservationEntitys eventReservationEntitys = _mapper.Map<EventReservationEntitys>(reserve);
-                return await _repository.AdicionarReserva(reserve);
+                return await _repository.AddReservation(reserve);
             }
             return false;
         }
 
 
-        public async Task<IEnumerable<EventReservDTO>> ConsultaReserva(string nome, string tituloEvento)
+        public async Task<IEnumerable<EventReservDTO>> ConsultReservation(string nome, string tituloEvento)
         {
-            IEnumerable<EventReservationEntitys> entidade = await _repository.ConsultaReserva(nome, tituloEvento);
+            IEnumerable<EventReservationEntitys> entidade = await _repository.ConsultReservation(nome, tituloEvento);
             if (entidade == null)
             {
                 return null;
@@ -48,23 +45,28 @@ namespace CityEventsService.Service
         }
 
 
-        public async Task<bool> DeletaReserva(int id)
+        public async Task<bool> DeleteReservation(int id)
         {
-            return await _repository.DeletaReserva(id);
+            return await _repository.DeleteReservation(id);
         }
 
 
-        public async Task<bool> EditarQuantidadeReserva(int id, int quantidade)
+        public async Task<bool> EditReservation(int id, int quantidade)
         {
-            return await _repository.EditarQuantidadeReserva(id, quantidade);
+            return await _repository.EditReservation(id, quantidade);
         }
 
-        public Task<bool> ValidaStatusEvento(int idEvento)
+        public Task<bool> ValidaStatusEvento(int idEvent)
         {
             throw new NotImplementedException();
         }
 
-        Task<IEnumerable<EventReservationEntitys>> IEventReservationRepository.ConsultaReserva(string nome, string tituloEvento)
+        public Task<bool> ValidateStatus(int idEvento)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<IEnumerable<EventReservationEntitys>> IEventReservationRepository.ConsultReservation(string nome, string tituloEvento)
         {
             throw new NotImplementedException();
         }

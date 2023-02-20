@@ -6,6 +6,7 @@ using CityEventsService.Interfaces;
 using CityEventsService.Service;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
+using static CityEvents.Filter.FilterExceptions;
 
 namespace CityEventsWebApi.Controllers
 {
@@ -24,49 +25,42 @@ namespace CityEventsWebApi.Controllers
             _cityEventsService = cityEventsService;
         }
 
-
-        //deletar referencia richard
-        ////private ICityEventService _cityEventService { get; set; }
-        ////public CityEventsController(ICityEventService cityEventService)
-        ////{
-        ////    _cityEventService = cityEventService;
-        ////}
-
-
-        //INCLUIR
         [HttpPost("InsertEvents")]
+        [TypeFilter(typeof(GeneralExcepetionFilter))]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<CityEventDTO>> Inserir(CityEventDTO entity)
+        public async Task<ActionResult<CityEventDTO>> InsertEvents(CityEventDTO entity)
         {
-            if (!await _cityEventsService.AdicionarEvento(entity))
+            if (!await _cityEventsService.AddcEvent(entity))
             {
                 return BadRequest();
             }
             return Ok(entity);
         }
 
-        //EDITAR
+
         [HttpPut("EditEvents")]
+        [TypeFilter(typeof(GeneralExcepetionFilter))]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<CityEventDTO>> EditarEvento(CityEventDTO entity, int id)
         {
-            if (!await _cityEventsService.EditarEvento(entity, id))
+            if (!await _cityEventsService.EditEvent(entity, id))
             {
                 return BadRequest();
             }
             return Ok(entity);
         }
 
-        //DELETAR
+
         [HttpDelete("DeleteEvents")]
+        [TypeFilter(typeof(GeneralExcepetionFilter))]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Deletar([FromQuery] int id)
         {
 
-            if (!await _cityEventsService.DeletarOuInativarEvento(id))
+            if (!await _cityEventsService.RemoveOrDeactivate(id))
             {
                 return BadRequest();
             }
@@ -74,30 +68,33 @@ namespace CityEventsWebApi.Controllers
         }
 
 
-
-        //CONSULTAPORTITULO
         [HttpGet("SearchByTitle")]
+        [TypeFilter(typeof(GeneralExcepetionFilter))]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<CityEventDTO> GetConsultaPorTitulo(string titulo)
+        public ActionResult<CityEventDTO> SearchByTitle(string title)
         {
-            return Ok(_cityEventsService.ConsultarPorTitulo(titulo));
+            if (title == null) 
+                return BadRequest();
+            return Ok(_cityEventsService.CheckbyTitle(title));
+        
         }
 
-
-        //CONSULTA POR LUGAR E DATA
+   
         [HttpGet("SearchByPlaceAndDate")]
+        [TypeFilter(typeof(GeneralExcepetionFilter))]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<CityEventDTO> GetConsultaPorLocalEData(string local, DateTime data)
+        public ActionResult<CityEventDTO> SearchByPlaceAndDate(string local, DateTime data)
         {
-            return Ok(_cityEventsService.ConsultaPorLocalEData(local, data));
+            return Ok(_cityEventsService.CheckLocalDate(local, data));
         }
 
-        //CONSULTA POR PREÇO E DATA
+        
         [HttpGet("SearchByPriceAndDate")]
+        [TypeFilter(typeof(GeneralExcepetionFilter))]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<CityEventDTO> GetConsultaPorPrecoData(decimal precoMin, decimal precoMax, DateTime data)
+        public ActionResult<CityEventDTO> SearchByPriceAndDate(decimal minimumPrice, decimal maximumPrice, DateTime data)
         {
-            return Ok(_cityEventsService.ConsultaPorPrecoEData(precoMin, precoMax, data));
+            return Ok(_cityEventsService.CheckPriceDateR(minimumPrice, maximumPrice, data));
         }
 
  
@@ -111,32 +108,3 @@ namespace CityEventsWebApi.Controllers
         
     }
 }
-
-
-
-//[HttpGet("ConsultaPorLocalEData")]
-//[ProducesResponseType(StatusCodes.Status200OK)]
-//public ActionResult<CityEventsEntity> GetConsultaPorLocalEData(string local, DateTime data)
-//{
-//    return Ok(_cityEventRepository.ConsultaPorLocalEData(local, data));
-//}
-
-//[HttpGet("ConsultaPorTitulo")]
-//[ProducesResponseType(StatusCodes.Status200OK)]
-//public ActionResult<CityEventsEntity> GetConsultaPorTitulo(string titulo)
-//{
-//    return Ok(_cityEventRepository.ConsultaPorTitulo(titulo));
-//}
-
-
-//[HttpPut]
-//[ProducesResponseType(StatusCodes.Status201Created)]
-//[ProducesResponseType(StatusCodes.Status400BadRequest)]
-//public ActionResult<CityEventsEntity> EditarEvento(CityEventsEntity entity, int id)
-//{
-//    if (!_cityEventRepository.EditarEvento(entity, id))
-//    {
-//        return BadRequest();
-//    }
-//    return Ok(entity);
-//}

@@ -26,9 +26,9 @@ namespace CityEventsWebApi.Controllers
         [HttpPost("MakeNewReservation")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult> AdicionarReserva(EventReservDTO reserva)
+        public async Task<ActionResult> AdicionarReserva(EventReservDTO reserve)
         {
-            if (!await _eventReservationService.AdicionarReserva(reserva))
+            if (!await _eventReservationService.AddReservation(reserve))
             {
                 return BadRequest();
             }
@@ -44,7 +44,7 @@ namespace CityEventsWebApi.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<CityEventDTO>> EditarQuantidadeReserva(int id, int quantidade)
         {
-            if (!await _eventReservationService.EditarQuantidadeReserva(id, quantidade))
+            if (!await _eventReservationService.EditReservation(id, quantidade))
             {
                 return BadRequest();
             }
@@ -57,7 +57,7 @@ namespace CityEventsWebApi.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> Deletar([FromQuery] int id)
         {
-            if (!await _eventReservationService.DeletaReserva(id))
+            if (!await _eventReservationService.RemoveReservation(id))
             {
                 return BadRequest();
             }
@@ -71,7 +71,7 @@ namespace CityEventsWebApi.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<IEnumerable<EventReservDTO>>> ConsultaReserva(string nome, string tituloEvento)
         {
-            return Ok(await _eventReservationService.ConsultaReserva(nome, tituloEvento));
+            return Ok(await _eventReservationService.ConsultReservation(nome, tituloEvento));
         }
     }
 }

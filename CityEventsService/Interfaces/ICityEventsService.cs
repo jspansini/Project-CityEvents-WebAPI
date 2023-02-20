@@ -12,11 +12,12 @@ namespace CityEventsService.Interfaces
     public interface ICityEventService
 
     {
-        Task<bool> AdicionarEvento(CityEventDTO evento);
-        Task<IEnumerable<CityEventDTO>> ConsultaPorLocalEData(string local, DateTime data);
-        Task<IEnumerable<CityEventDTO>> ConsultaPorPrecoEData(decimal precoMin, decimal precoMax, DateTime data);
-        Task<IEnumerable<CityEventDTO>> ConsultarPorTitulo(string titulo);
-        Task<bool> EditarEvento(CityEventDTO evento, int id);
+        Task<bool> AddcEvent(CityEventDTO evento);
+        Task<IEnumerable<CityEventDTO>> CheckLocalDate(string local, DateTime date);
+        Task<IEnumerable<CityEventDTO>> CheckPriceDateR(decimal precoMin, decimal precoMax, DateTime data);
+        Task<IEnumerable<CityEventDTO>> CheckbyTitle(string title);
+        Task<bool> EditEvent(CityEventDTO evento, int id);
         Task<bool> DeletarOuInativarEvento(int id);
+        Task<bool> RemoveOrDeactivate(int id);
     }
 }

@@ -14,6 +14,7 @@ namespace CityEventsService.Interfaces
         Task<IEnumerable<EventReservationEntitys>> ConsultReservation(string nome, string tituloEvento);
         Task<bool> DeleteReservation(int id);
         Task<bool> EditReservation(int id, int quantidade);
+        Task<bool> ValidaStatusEvento(int idEvent);
         Task<bool> ValidateStatus(int idEvento);
     }
 }

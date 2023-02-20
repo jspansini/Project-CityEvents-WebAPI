@@ -18,7 +18,7 @@ namespace CityEventsInfraData.Repository
         {
             _stringConnection = Environment.GetEnvironmentVariable("DATABASE_CONFIG");
         }
-        public async Task<bool> AdicionarEvento(CityEventsEntitys evento)
+        public async Task<bool> AddEvent(CityEventsEntitys evento)
         {
             string query = @"INSERT INTO CityEvent(title,description, dateHourEvent, local, address, price,status) 
              VALUES (@title, @description, @dateHourEvent, @local, @address, @price,true)";
@@ -39,7 +39,7 @@ namespace CityEventsInfraData.Repository
         //    return (IEnumerable<CityEventsEntitys>)conn.Query<CityEventsEntitys>(query, parametros).ToList();
         //}
 
-        public async Task<List<CityEventsEntitys>> ConsultaPorPrecoEData(decimal precoMin, decimal precoMax, DateTime data)
+        public async Task<List<CityEventsEntitys>> SearchBySPriceDate(decimal precoMin, decimal precoMax, DateTime data)
         {
             string query = "SELECT * FROM CityEvent where DATE(dateHourEvent) = @data and price between @precoMin and @precoMax";
             DynamicParameters parametros = new();
@@ -50,7 +50,7 @@ namespace CityEventsInfraData.Repository
             return (conn.Query<CityEventsEntitys>(query, parametros)).ToList();
         }
 
-        public async Task<List<CityEventsEntitys>> ConsultaPorTitulo(string titulo)
+        public async Task<List<CityEventsEntitys>> SearchBySTitle(string titulo)
         {
             string query = "SELECT * FROM CityEvent where title like @titulo";
             titulo = $"%{titulo}%";
@@ -60,7 +60,7 @@ namespace CityEventsInfraData.Repository
             return (conn.Query<CityEventsEntitys>(query, parametros)).ToList();
         }
 
-        public async Task<bool> EditarEvento(CityEventsEntitys evento, int id)
+        public async Task<bool> EditEvent(CityEventsEntitys evento, int id)
         {
             string query = "UPDATE CityEvent set title=@title,description=@description, dateHourEvent=@dateHourEvent, local=@local, address=@address, price=@price where idEvent=@id";
             DynamicParameters parametros = new(evento);
@@ -70,7 +70,7 @@ namespace CityEventsInfraData.Repository
             return linhasAfetadas > 0;
         }
 
-        public async Task<bool> ExcluirEvento(int id)
+        public async Task<bool> DeletEvent(int id)
         {
             string query = "DELETE FROM CityEvent WHERE idEvent = @id";
             DynamicParameters parametros = new();
@@ -79,7 +79,7 @@ namespace CityEventsInfraData.Repository
             int linhasAfetadas = await conn.ExecuteAsync(query, parametros);
             return linhasAfetadas > 0;
         }
-        public async Task<bool> InativarEvento(int id)
+        public async Task<bool> InactivateEvent(int id)
         {
             string query = "UPDATE CityEvent set status = false WHERE IdEvent = @id";
             DynamicParameters parametros = new();
@@ -88,7 +88,7 @@ namespace CityEventsInfraData.Repository
             int linhasAfetadas = await conn.ExecuteAsync(query, parametros);
             return linhasAfetadas > 0;
         }
-        public async Task<bool> ConsultaReservasNoEvento(int idEvento)
+        public async Task<bool> CheckReservations(int idEvento)
         {
             string query = "SELECT * FROM EventReservation  WHERE idEvent = @idEvento";
             DynamicParameters parametros = new();
@@ -99,12 +99,12 @@ namespace CityEventsInfraData.Repository
 
 
         //falta implementar
-        Task<IEnumerable<CityEventsEntitys>> ICityEventsRepository.ConsultaPorLocalEData(string local, DateTime data)
+        Task<IEnumerable<CityEventsEntitys>> ICityEventsRepository.SearchBySLocaDate(string local, DateTime data)
         {
             throw new NotImplementedException();
         }
 
-        Task<List<CityEventsEntitys>> ICityEventsRepository.ConsultaPorPrecoEData(decimal precoMin, decimal precoMax, DateTime data)
+        Task<List<CityEventsEntitys>> ICityEventsRepository.SearchBySPriceDate(decimal precoMin, decimal precoMax, DateTime data)
         {
             throw new NotImplementedException();
         }
