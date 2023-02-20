@@ -17,7 +17,6 @@ namespace CityEventsService.Interfaces
         Task<IEnumerable<CityEventDTO>> CheckPriceDateR(decimal precoMin, decimal precoMax, DateTime data);
         Task<IEnumerable<CityEventDTO>> CheckbyTitle(string title);
         Task<bool> EditEvent(CityEventDTO evento, int id);
-        Task<bool> DeletarOuInativarEvento(int id);
         Task<bool> RemoveOrDeactivate(int id);
     }
 }

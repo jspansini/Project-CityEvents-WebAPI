@@ -5,6 +5,7 @@ using Dapper;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,16 +29,6 @@ namespace CityEventsInfraData.Repository
             int linhasAfetadas = await conn.ExecuteAsync(query, parametros);
             return linhasAfetadas > 0;
         }
-
-        //Task<IEnumerable<CityEventsEntitys>> ICityEventsRepository.ConsultaPorLocalEData(string local, DateTime data)
-        //{ 
-        //    string query = @"SELECT * FROM CityEvent where local = @local and DATE(dateHourEvent) = @data";
-        //    DynamicParameters parametros = new();
-        //    parametros.Add("local", local);
-        //    parametros.Add("data", data);
-        //    using MySqlConnection conn = new(_stringConnection);
-        //    return (IEnumerable<CityEventsEntitys>)conn.Query<CityEventsEntitys>(query, parametros).ToList();
-        //}
 
         public async Task<List<CityEventsEntitys>> SearchBySPriceDate(decimal precoMin, decimal precoMax, DateTime data)
         {
@@ -72,7 +63,7 @@ namespace CityEventsInfraData.Repository
 
         public async Task<bool> DeletEvent(int id)
         {
-            string query = "DELETE FROM CityEvent WHERE idEvent = @id";
+            string query = "DELETE FROM CityEvent WHERE IdEvent = @id";
             DynamicParameters parametros = new();
             parametros.Add("id", id);
             using MySqlConnection conn = new(_stringConnection);
@@ -97,17 +88,17 @@ namespace CityEventsInfraData.Repository
             return conn.QueryFirstOrDefault(query, parametros) == null;
         }
 
-
-        //falta implementar
         Task<IEnumerable<CityEventsEntitys>> ICityEventsRepository.SearchBySLocaDate(string local, DateTime data)
         {
-            throw new NotImplementedException();
+            string query = "SELECT * FROM CityEvent where LOCAL = @local and DATE(dateHourEvent) = @data";
+            DynamicParameters parametros = new();
+            parametros.Add("local", local);
+            parametros.Add("data", data);
+            using MySqlConnection conn = new(_stringConnection);
+            return conn.QueryFirstOrDefault(query, parametros);
         }
 
-        Task<List<CityEventsEntitys>> ICityEventsRepository.SearchBySPriceDate(decimal precoMin, decimal precoMax, DateTime data)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
 

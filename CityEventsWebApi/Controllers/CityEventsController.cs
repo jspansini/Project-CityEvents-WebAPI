@@ -35,7 +35,7 @@ namespace CityEventsWebApi.Controllers
             {
                 return BadRequest();
             }
-            return Ok(entity);
+            return CreatedAtAction(nameof(AddcEvent), entity);
         }
 
 
