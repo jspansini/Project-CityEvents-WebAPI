@@ -35,7 +35,7 @@ namespace CityEventsWebApi.Controllers
             {
                 return BadRequest();
             }
-            return CreatedAtAction(nameof(AddcEvent), entity);
+            return CreatedAtAction(nameof(InsertEvents), entity);
         }
 
 
@@ -95,16 +95,6 @@ namespace CityEventsWebApi.Controllers
         public ActionResult<CityEventDTO> SearchByPriceAndDate(decimal minimumPrice, decimal maximumPrice, DateTime data)
         {
             return Ok(_cityEventsService.CheckPriceDateR(minimumPrice, maximumPrice, data));
-        }
-
- 
-
-       
-  
-        
-
-        
-       
-        
+        }    
     }
 }

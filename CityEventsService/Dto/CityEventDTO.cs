@@ -24,8 +24,6 @@ namespace CityEvents.Service.DTO
 
         [MaxLength(150)]
         public string? Address { get; set; }
-
-        [Required(AllowEmptyStrings = false, ErrorMessage = "My friend, you gotta give a price, dãh! Is it an free event?")]
         public Decimal Price { get; set; }
         public bool Status { get; set; }
     }

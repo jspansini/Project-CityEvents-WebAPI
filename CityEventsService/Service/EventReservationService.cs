@@ -15,9 +15,9 @@ namespace CityEventsService.Service
         private IEventReservationRepository _repository;
         private IMapper _mapper;
 
-        public EventReservationService(IEventReservationRepository rep, IMapper mapper)
+        public EventReservationService(IEventReservationRepository repository, IMapper mapper)
         {
-            _repository = rep;
+            _repository = repository;
             _mapper = mapper;
         }
 
@@ -33,9 +33,9 @@ namespace CityEventsService.Service
         }
 
 
-        public async Task<IEnumerable<EventReservDTO>> ConsultReservation(string nome, string tituloEvento)
+        public async Task<IEnumerable<EventReservDTO>> ConsultReservation(string nome, string titleEvent)
         {
-            IEnumerable<EventReservationEntitys> entidade = await _repository.ConsultReservation(nome, tituloEvento);
+            IEnumerable<EventReservationEntitys> entidade = await _repository.ConsultReservation(nome, titleEvent);
             if (entidade == null)
             {
                 return null;
@@ -51,9 +51,9 @@ namespace CityEventsService.Service
         }
 
 
-        public async Task<bool> EditReservation(int id, int quantidade)
+        public async Task<bool> EditReservation(int id, int quantity)
         {
-            return await _repository.EditReservation(id, quantidade);
+            return await _repository.EditReservation(id, quantity);
         }
 
         public Task<bool> ValidaStatusEvento(int idEvent)
